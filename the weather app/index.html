@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="wrapper">
+ 
+         <!-- title  -->
+        <h1>weather app</h1>
+        <!-- two tab  -->
+        <div class="tab-container">
+            <p class="tab" data-userWeather>Your Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+
+        <div class="weather-container">
+
+        <!-- grant location access container -->
+        <div class="new-container grant-location-container">
+            <img src="assets/location.png" alt="" width="80" height="80" loading="lazy">
+            <p>Grant Location Access</p>
+            <p>Allow Access to get weather Information</p>
+            <button data-grantAccess>grant access</button>             
+       </div>
+
+
+       <!-- search container  -->
+       <form type="submit" class="searchweather-form" data-searchForm>
+        <div class="search-container">
+
+        <input placeholder="Search for City..." data-searchInput class="search-city-input" id="search-input">
+
+        <button search-btn>
+            <img src="assets/search.png" alt="" height="20" width="20">
+        </button >
+        </div>
+       </form>
+
+      <!-- loading gif  -->
+      <div class="new-container loading-container">
+        <img src="assets/loading.gif" alt="" loading-gif width="150">
+        <p>Loading</p>
+      </div>
+
+      <!-- weather information  -->
+
+      <div class="user-info-container new-container">
+        <div class="city-container">
+            <p data-cityName></p>
+            <img data-countryIcon>
+        </div>
+
+        <p data-weatherDesc></p>
+        <img data-weatherIcon>
+        <p data-temp></p>
+
+        <!-- three boxes -->
+        <div class="parameters-container">
+        <div class="parameters">
+            <img src="assets/wind.png" alt="">
+            <p>WINDSPEED</p> 
+            <p data-windspeed></p>
+        </div>
+
+        <div class="parameters">
+            <img src="assets/humidity.png" alt="">
+            <p>HUMIDITY</p> 
+            <p data-humidity></p>
+        </div>
+
+            <div class="parameters">
+            <img src="assets/cloud.png" alt="">
+            <p>CLOUDS</p> 
+            <p data-cloudiness></p>
+            </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+     </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- your location  -->
+<!-- https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key} -->
+
+<!-- search location  -->
+<!-- https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key} -->
+
+<!-- API_KEY -->
+<!-- 8e7d3850cf218959a2dcd2c9f4219db4 -->
